@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import '../Styles/PaginaRegistro.css';
+import { Link } from "react-router-dom";
 function PaginaRegistro() {
 
-  const [nombre, setnombre] = useState("‌");
+  const [nombre, setnombre] = useState("");
   const cambiarnombre = (nuevonombre) => {
     setnombre(nuevonombre);
   }
@@ -16,6 +17,8 @@ function PaginaRegistro() {
   const cambiarcorreo = (nuevocorreo) => {
     setcorreo(nuevocorreo);
   }
+
+  const isValid = nombre.trim() !== "" && correo.includes('@') && contraseña.length >= 7;
 
   return (
     <div className='contenedor'>
@@ -33,7 +36,16 @@ function PaginaRegistro() {
             <input placeholder='Nombre' type='text' onChange={e => cambiarnombre(e.target.value)} required></input><br></br>
             <input placeholder='Correo electronico' type='email' onChange={e => cambiarcorreo(e.target.value)} required></input><br></br>
             <input placeholder='Contraseña' type='password' minLength={7} onChange={e => cambiarcontraseña(e.target.value)} required></input><br></br>
-            <button className='env'>A cocinar!!</button>
+
+            {/* Mostrar el boton sin enlace cuando el formulario no es valido */}
+            {!isValid && (
+              <button className='env' type='button'>A cocinar!!</button>
+            )}
+
+            {/* Mostrar el boton con enlace cuando el formulario es valido */}
+            {isValid && (
+              <Link to="/Recetas"><button className='env' type='button'>A cocinar!!</button></Link>
+            )}
           </form>
 
         </div>
@@ -45,8 +57,8 @@ function PaginaRegistro() {
           <p className='corr'>📬 <strong className={correo.includes('@') ? 'verde' : 'rojo'}>{correo}</strong>  </p>
           <img className='gif-personaje' src="/images/cocinero.gif" alt="Cocinero animado" />
           <img className='cocina' src="/images/cocina.png" alt="Imagen de cocina" />
-          {nombre.trim() !== "" && correo.includes('@') && contraseña.length >= 7 && (
-            <button className='env'>A cocinar!!</button>
+          {nombre.trim() != "" && correo.includes('@') && contraseña.length >= 7 && (
+           <Link to="/Recetas"><button className='env'>A cocinar!!</button></Link>
           )}
 
         </div>
@@ -63,6 +75,6 @@ function PaginaRegistro() {
       </div>
     </div>
   )
-}
+} 
 
 export default PaginaRegistro
