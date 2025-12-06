@@ -8,34 +8,32 @@ h2 {
     color: #af9475;
 }
 
-.contenedor {
+.container {
     display: grid;
     grid-template-rows: 12vh 73vh 15vh;
     grid-template-areas:
-        "superior"
-        "principal"
-        "pie";
+        "top"
+        "main"
+        "footer";
 }
 
-
-.superior {
-    grid-area: superior;
+.top {
+    grid-area: top;
 }
 
-.principal {
-    grid-area: principal;
+.main {
+    grid-area: main;
     display: grid;
     grid-template-columns: 45% 55%;
     grid-template-rows: auto;
     grid-template-areas:
-        "registro cocinero";
+        "signup chef";
 }
 
-.pie {
-    grid-area: pie;
+.footer {
+    grid-area: footer;
 }
-
-.titulo {
+.title {
     grid-area: titulo;
     text-align: center;
     font-size: 8vh;
@@ -43,8 +41,8 @@ h2 {
     text-shadow: 4px 3px 0 #8B5E3C, 6px 4px 0 #F5E3C4
 }
 
-.registro {
-    grid-area: registro;
+.signup {
+    grid-area: signup;
     text-align: center;
     /*he tenido que poner la imagen en una carpeta dentro de Styles porque desde public no la coge*/
     background-image: url("./imagesS/formulario.png");
@@ -54,7 +52,7 @@ h2 {
     margin-bottom: 12vh;
 }
 
-.titulo-registro {
+.signup-title {
     margin-top: 22vh;
     font-size: 2.5vh;
     text-shadow: 2px 1px #8B5E3C, 3px 3px#F5E3C4;
@@ -84,7 +82,7 @@ input:hover {
         0 0.5vh 2vh rgba(0, 0, 0, 0.25);
 }
 
-.env {
+.submit {
     margin-top: 1vh;
     padding: 1.5vh 2.5vh;
     height: 5vh;
@@ -105,11 +103,11 @@ input:hover {
     color: gray;
 }
 
-.cocinero {
+.chef {
     border: solid black 3px;
     box-shadow: 4px 4px 0px #000000;
     margin-top: 20vh;
-    grid-area: cocinero;
+    grid-area: chef;
     background-color: white;
     width: 45vh;
     height: 32vh;
@@ -120,61 +118,60 @@ input:hover {
     grid-template-columns: 33% 39% 27%;
     grid-template-rows: 20% 80%;
     grid-template-areas:
-        "nom corr con"
-        "per coc env";
+        "name email pass"
+        "char kitchen submit";
 }
 
-.gif-personaje {
-    grid-area: per;
+.gif-character {
+    grid-area: char;
     width: 18vh;
     margin-top: 1vh;
 }
 
-.cocina {
-    grid-area: coc;
+.kitchen {
+    grid-area: kitchen;
     width: 18vh;
     margin-top: 2vh;
     margin-left: 10vh;
 }
 
-.nom {
+.name {
     margin-left: 1vh;
-    grid-area: nom;
+    grid-area: name;
     margin-top: 1vh;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 2.5vh;
 }
 
-.nom strong {
+.name strong {
     font-size: 1.7vh;
 }
 
-.corr {
-    grid-area: corr;
+.email {
+    grid-area: email;
     margin-top: 1vh;
     font-weight: bold;
     font-size: 2.5vh;
 }
 
-.con {
-    grid-area: con;
+.pass {
+    grid-area: pass;
     margin-top: 1vh;
     font-weight: bold;
     font-size: 2.5vh;
 }
 
-
-.env:hover {
+.submit:hover {
     background: #efe2c4;
     transform: translateY(-0.3vh);
     box-shadow:
         0 0.5vh 2vh rgba(0, 0, 0, 0.25);
 }
 
-.cocinero .env {
+.chef .submit {
     margin-left: -3vh;
-    grid-area: env;
+    grid-area: submit;
     margin-top: 20vh;
     width: 13vh;
     height: 3.5vh;
@@ -183,18 +180,18 @@ input:hover {
     border: 0.25vh solid burlywood;
 }
 
-.verde {
+.green {
     font-size: 1.5vh;
     background-color: green
 }
 
-.rojo {
+.red {
     font-size: 1.5vh;
     background-color: red;
 }
 
-.pie {
-    grid-area: pie;
+.footer {
+    grid-area: footer;
     background-color: rgba(139, 94, 60, 0.8);
     color: #FFF8F0;
     text-align: center;
@@ -207,6 +204,6 @@ a {
     text-decoration: none;
 }
 
-.pie p {
+.footer p {
     margin: 0.6vh;
 }

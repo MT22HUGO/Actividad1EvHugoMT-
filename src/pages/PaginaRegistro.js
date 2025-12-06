@@ -21,50 +21,50 @@ function PaginaRegistro() {
   const isValid = nombre.trim() !== "" && correo.includes('@') && contraseña.length >= 7;
 
   return (
-    <div className='contenedor'>
-      <div className='superior'>
-        <div className='titulo'>
-          <div className='texto-titulo'></div>
+    <div className='container'>
+      <div className='top'>
+        <div className='title'>
+          <div className='title-text'></div>
           <h1>¡Bienvenido a Sabor Compartido!</h1>
         </div>
       </div>
-      <div className='principal'>
-        <div className='registro'>
-          <h2 className='titulo-registro'>REGISTRATE <br></br>
+      <div className='main'>
+        <div className='signup'>
+          <h2 className='signup-title'>REGISTRATE <br></br>
             Y DISFRUTA DE LAS MEJORES RECETAS!!</h2>
-          <form className='formulario'>
+          <form className='form'>
             <input placeholder='Nombre' type='text' onChange={e => cambiarnombre(e.target.value)} required></input><br></br>
             <input placeholder='Correo electronico' type='email' onChange={e => cambiarcorreo(e.target.value)} required></input><br></br>
             <input placeholder='Contraseña' type='password' minLength={7} onChange={e => cambiarcontraseña(e.target.value)} required></input><br></br>
 
             {/* Mostrar el boton sin enlace cuando el formulario no es valido */}
             {!isValid && (
-              <button className='env' type='button'>A cocinar!!</button>
+              <button className='submit' type='button'>A cocinar!!</button>
             )}
 
             {/* Mostrar el boton con enlace cuando el formulario es valido */}
             {isValid && (
-              <Link to="/Recetas"><button className='env' type='button'>A cocinar!!</button></Link>
+              <Link to="/Recetas"><button className='submit' type='button'>A cocinar!!</button></Link>
             )}
           </form>
 
         </div>
 
-        <div className='cocinero'>
+        <div className='chef'>
 
-          <p className='nom'>🍳 <strong> {nombre}</strong> </p>
-          <p className='con'>🔐 <strong className={contraseña.length >= 7 ? 'verde' : 'rojo'}>{"*".repeat(contraseña.length)}</strong> </p>
-          <p className='corr'>📬 <strong className={correo.includes('@') ? 'verde' : 'rojo'}>{correo}</strong>  </p>
-          <img className='gif-personaje' src="/images/cocinero.gif" alt="Cocinero animado" />
-          <img className='cocina' src="/images/cocina.png" alt="Imagen de cocina" />
+          <p className='name'>🍳 <strong> {nombre}</strong> </p>
+          <p className='pass'>🔐 <strong className={contraseña.length >= 7 ? 'green' : 'red'}>{"*".repeat(contraseña.length)}</strong> </p>
+          <p className='email'>📬 <strong className={correo.includes('@') ? 'green' : 'red'}>{correo}</strong>  </p>
+          <img className='gif-character' src="/images/cocinero.gif" alt="Cocinero animado" />
+          <img className='kitchen' src="/images/cocina.png" alt="Imagen de cocina" />
           {nombre.trim() != "" && correo.includes('@') && contraseña.length >= 7 && (
-           <Link to="/Recetas"><button className='env'>A cocinar!!</button></Link>
+            <Link to="/Recetas"><button className='submit'>A cocinar!!</button></Link>
           )}
 
         </div>
       </div>
-      <div className='pie'>
-        <div className='pie'>
+      <div className='footer'>
+        <div className='footer'>
           <p>© 2025 <strong>Sabor Compartido</strong> 🍳</p>
           <p>Recetas que unen, sabores que inspiran. ❤️🥘</p>
           <p>Síguenos en nuestras redes:<a href='https://www.instagram.com/karguinano/?hl=es' target="_blank"> 📸 </a>
@@ -75,6 +75,6 @@ function PaginaRegistro() {
       </div>
     </div>
   )
-} 
+}
 
 export default PaginaRegistro
