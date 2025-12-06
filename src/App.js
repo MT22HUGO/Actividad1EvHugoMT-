@@ -7,9 +7,8 @@ import PaginaRecetas from './pages/PaginaRecetas';
 function App() {
   return (
     <Routes>
-      <Route path='/' element={PaginaRegistro} />
-      <Route path='/Recetas' element={PaginaRecetas} />
-
+      <Route path='/' element={<PaginaRegistro/>} />
+      <Route path='/Recetas' element={<PaginaRecetas/>} />
     </Routes>
   );
 }
