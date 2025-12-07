@@ -4,7 +4,7 @@ function Galletas({ onClose }) {
         <div className="card">
             <div className="card-landing" style={{ '--i': 'url("/images/galletas.png")' }}>
                 <h6>Galletas</h6>
-                <button className="close-btn" onClick={onClose}>x</button>
+                <button className="close-btn" onClick={onClose}>x</button> 
             </div>
             <div className="card-info">
                 <div className='head'>
@@ -26,7 +26,7 @@ function Galletas({ onClose }) {
                 </div>
                 <div className="content">
                     <p className='title-ingredients'>Ingredientes:</p>
-                    <div className='list list--medium'>
+                    <div className='list'>
                         <label>
                             <input type="checkbox" /> <span>200g de harina</span>
                         </label>

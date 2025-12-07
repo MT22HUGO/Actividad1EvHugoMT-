@@ -1,5 +1,6 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/* Importo esto para que funcionen los iconos y para la fuente */
 
 .card {
     position: relative;
@@ -12,10 +13,10 @@
     width: 100%;
     height: 100%;
     box-shadow: 0 1vh 2vh black;
-    background: linear-gradient(transparent, 80%, black), var(--i);
+    background: linear-gradient(transparent, 80%, black), var(--i); /* Da un degradado negro en la parte inferior de la foto de la tarjeta*/
     background-size: cover;
     background-position: center;
-    z-index: 100;
+    z-index: 100;       /* Para que la portada de la tarjeta aparezca por encima de la receta*/
 }
 
 .close-btn {
@@ -51,11 +52,11 @@ h6 {
     margin: auto;
     padding: 1.5vh;
     background-color: white;
-    z-index: 90;
+    z-index: 90; /* Para que este debajo de la portada*/
     transition: 0.5s;
 }
 
-.card:hover .card-info {
+.card:hover .card-info { /* Cuando pasas el puntero por encima de la tarjeta la receta se desplaza a la derecha*/
     left: 100%;
 }
 
@@ -94,10 +95,6 @@ h6 {
     font-size: 1.4vh;
 }
 
-.comtent {
-    margin-top: 1.5vh;
-}
-
 .list {
     margin-top: 1vh;
     font-size: 1.5vh;
@@ -118,7 +115,7 @@ h6 {
     accent-color: #af9475;
 }
 
-/* cuando el checkbox esté marcado, tachar el texto que está justo después */
+/* Cuando el checkbox esté marcado, tachar el texto que está justo después */
 .list input:checked+span {
     text-decoration: line-through;
 }

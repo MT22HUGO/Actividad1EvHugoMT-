@@ -2,6 +2,7 @@ import '../Styles/NuevaReceta.css'
 import React, { useState } from 'react';
 
 function NuevaReceta({ onClose }) {
+    /*he añadido esta funcion que es como la de la pagina de registro para que cuando añadas el nombre de la receta cambie en la portada*/
     const [nombre, setnombre] = useState("Nueva Receta");
     const cambiarnombre = (nuevonombre) => {
         setnombre(nuevonombre);

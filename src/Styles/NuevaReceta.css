@@ -1,5 +1,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+/* Importo esto para que funcionen los iconos y para la fuente */
+/* Faltan estilos de la mayoria de cosas porque tienen los mismos nombres que la de RecetasCreadas y lo coge desde ahi */
 
 .card-landing {
     position: relative;

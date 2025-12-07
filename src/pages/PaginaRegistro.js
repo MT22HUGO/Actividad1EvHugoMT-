@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import '../Styles/PaginaRegistro.css';
 import { Link } from "react-router-dom";
 function PaginaRegistro() {
-
+/* He añadido estas funciones para que aparezca lo que vas escribiendo en el formulario encima del personaje*/
   const [nombre, setnombre] = useState("");
   const cambiarnombre = (nuevonombre) => {
     setnombre(nuevonombre);
@@ -17,7 +17,7 @@ function PaginaRegistro() {
   const cambiarcorreo = (nuevocorreo) => {
     setcorreo(nuevocorreo);
   }
-
+/* Esta verifica si lo añadido en cada campo cumple las condiciones y cuando las cumple muestra el boton que tiene el enlace a la siguiente pagina*/
   const isValid = nombre.trim() !== "" && correo.includes('@') && contraseña.length >= 7;
 
   return (
@@ -53,10 +53,11 @@ function PaginaRegistro() {
         <div className='chef'>
 
           <p className='name'>🍳 <strong> {nombre}</strong> </p>
-          <p className='pass'>🔐 <strong className={contraseña.length >= 7 ? 'green' : 'red'}>{"*".repeat(contraseña.length)}</strong> </p>
+          <p className='pass'>🔐 <strong className={/*Cdependiendo de si se cumple o no tiene una clase u otra*/contraseña.length >= 7 ? 'green' : 'red'}>{"*".repeat(contraseña.length)}</strong> </p>
           <p className='email'>📬 <strong className={correo.includes('@') ? 'green' : 'red'}>{correo}</strong>  </p>
           <img className='gif-character' src="/images/cocinero.gif" alt="Cocinero animado" />
           <img className='kitchen' src="/images/cocina.png" alt="Imagen de cocina" />
+          {/* Mostrar el boton con enlace cuando el formulario es valido y si no no muestra nada */}
           {nombre.trim() != "" && correo.includes('@') && contraseña.length >= 7 && (
             <Link to="/Recetas"><button className='submit'>A cocinar!!</button></Link>
           )}
