@@ -1,0 +1,136 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+
+.card {
+    position: relative;
+    width: 30vh;
+    height: 40vh;
+}
+
+.card-landing {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 1vh 2vh black;
+    background: linear-gradient(transparent, 80%, black), var(--i);
+    background-size: cover;
+    background-position: center;
+    z-index: 100;
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5vh;
+    right: 0.5vh;
+    background: rgb(0, 0, 0);
+    border: none;
+    font-size: 2vh;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5vh 1vh;
+    border-radius: 100%;
+    color: red;
+}
+
+h6 {
+    position: absolute;
+    bottom: 1vh;
+    left: 1vh;
+    font-size: 2.5vh;
+    color: white;
+}
+
+.card-info {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    padding: 1.5vh;
+    background-color: white;
+    z-index: 90;
+    transition: 0.5s;
+}
+
+.card:hover .card-info {
+    left: 100%;
+}
+
+.head {
+    padding: 0.5vh 0;
+    border-bottom: 0.2vh solid #af9475;
+}
+
+.head pre {
+    font-weight: bold;
+}
+
+.title-ingredients {
+    font-size: 2vh;
+    font-weight: 700;
+    color: #af9475;
+}
+
+.description {
+    display: flex;
+    gap: 1vh;
+}
+
+.item {
+    display: flex;
+    gap: 0.5vh;
+    align-items: center;
+}
+
+.item i {
+    color: #af9475;
+    font-size: 1.5vh;
+}
+
+.item p {
+    font-size: 1.4vh;
+}
+
+.comtent {
+    margin-top: 1.5vh;
+}
+
+.list {
+    margin-top: 1vh;
+    font-size: 1.5vh;
+}
+
+.list label {
+    display: flex;
+    align-items: center;
+    gap: 0.8vh;
+    padding: 0.6vh 0;
+}
+
+.list input {
+    width: 1.4vh;
+    height: 1.4vh;
+    margin: 0;
+    padding: 0;
+    accent-color: #af9475;
+}
+
+/* cuando el checkbox esté marcado, tachar el texto que está justo después */
+.list input:checked+span {
+    text-decoration: line-through;
+}
+
+.btn {
+    padding: 1vh 0;
+    color: white;
+    width: 100%;
+    text-decoration: none;
+    text-align: center;
+    background: #af9475;
+    display: block;
+    margin-top: 1.5vh;
+    font-weight: bold;
+}

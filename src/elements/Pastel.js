@@ -1,26 +1,27 @@
 import '../Styles/RecetasCreadas.css'
-function Galletas({ onClose }) {
+function Pastel({ onClose }) {
     return (
         <div className="card">
-            <div className="card-landing" style={{ '--i': 'url("/images/galletas.png")' }}>
-                <h6>Galletas</h6>
+            <div className="card-landing" style={{ '--i': 'url("/images/pastel.jpg")' }}>
+                <h6>Pastel de chocolate</h6>
                 <button className="close-btn" onClick={onClose}>x</button>
             </div>
             <div className="card-info">
                 <div className='head'>
-                    <pre>Galletas    <i className="fa-solid fa-calendar-days"></i> 06/12/2025</pre>
+                    <per><i className="fa-solid fa-calendar-days"></i> 07/12/2025</per>
+                    <pre>Pastel de chocolate </pre>
                     <div className="description">
                         <div className="item">
                             <i className="fa-regular fa-clock"></i>
-                            <p>40 min</p>
+                            <p>70 min</p>
                         </div>
                         <div className="item">
                             <i className="fa-regular fa-user"></i>
-                            <p>4</p>
+                            <p>8</p>
                         </div>
                         <div className="item">
                             <i className="fa-regular fa-star"></i>
-                            <p>4,5</p>
+                            <p>3,5</p>
                         </div>
                     </div>
                 </div>
@@ -31,19 +32,16 @@ function Galletas({ onClose }) {
                             <input type="checkbox" /> <span>200g de harina</span>
                         </label>
                         <label>
-                            <input type="checkbox" /> <span>100g de azúcar</span>
+                            <input type="checkbox" /> <span>200g de azúcar</span>
                         </label>
                         <label>
-                            <input type="checkbox" /> <span>100g de mantequilla</span>
+                            <input type="checkbox" /> <span>120 g de cacao en polvo</span>
                         </label>
                         <label>
-                            <input type="checkbox" /> <span>1 huevo</span>
+                            <input type="checkbox" /> <span>3 huevos</span>
                         </label>
                         <label>
-                            <input type="checkbox" /> <span>1 cucharadita de esencia de vainilla</span>
-                        </label>
-                        <label>
-                            <input type="checkbox" /> <span>1 pizca de sal</span>
+                            <input type="checkbox" /> <span>1 sobre de levadura</span>
                         </label>
                     </div>
                 </div>
@@ -55,4 +53,4 @@ function Galletas({ onClose }) {
     )
 }
 
-export default Galletas
+export default Pastel
