@@ -1,0 +1,126 @@
+{
+    "info": {
+        "_postman_id": "abc123-recetas-collection",
+        "name": "Recetas API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Obtener todas las recetas",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/recetas",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["recetas"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Obtener receta por ID",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/recetas/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["recetas", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Crear receta - Galletas",
+            "request": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nombre\": \"Galletas\",\n  \"fechaPublicacion\": \"2025-12-06\",\n  \"tiempoMinutos\": 40,\n  \"porciones\": 4,\n  \"valoracion\": 4.5,\n  \"publicada\": true,\n  \"ingredientes\": [\n    { \"nombre\": \"200g de harina\" },\n    { \"nombre\": \"100g de azúcar\" },\n    { \"nombre\": \"100g de mantequilla\" },\n    { \"nombre\": \"1 huevo\" },\n    { \"nombre\": \"1 cucharadita de esencia de vainilla\" },\n    { \"nombre\": \"1 pizca de sal\" }\n  ]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/recetas",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["recetas"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Crear receta - Pastel de chocolate",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Content-Type",
+                        "value": "application/json"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nombre\": \"Pastel de chocolate\",\n  \"fechaPublicacion\": \"2025-12-07\",\n  \"tiempoMinutos\": 70,\n  \"porciones\": 8,\n  \"valoracion\": 3.5,\n  \"publicada\": true,\n  \"ingredientes\": [\n    { \"nombre\": \"200g de harina\" },\n    { \"nombre\": \"200g de azúcar\" },\n    { \"nombre\": \"120g de cacao en polvo\" },\n    { \"nombre\": \"3 huevos\" },\n    { \"nombre\": \"1 sobre de levadura\" }\n  ]\n}"
+                },
+                "url": {
+                    "raw": "http://localhost:8080/recetas",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["recetas"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Actualizar receta",
+            "request": {
+                "method": "PUT",
+                "header": [],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n  \"nombre\": \"Galletas de chocolate\",\n  \"fechaPublicacion\": \"2025-12-06\",\n  \"tiempoMinutos\": 45,\n  \"porciones\": 6,\n  \"valoracion\": 5.0,\n  \"publicada\": true,\n  \"ingredientes\": [\n    { \"nombre\": \"200g de harina\" },\n    { \"nombre\": \"100g de azúcar\" },\n    { \"nombre\": \"100g de mantequilla\" },\n    { \"nombre\": \"2 huevos\" },\n    { \"nombre\": \"50g de chispas de chocolate\" },\n    { \"nombre\": \"1 cucharadita de esencia de vainilla\" }\n  ]\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": {
+                    "raw": "http://localhost:8080/recetas/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["recetas", "1"]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Eliminar receta",
+            "request": {
+                "method": "DELETE",
+                "header": [],
+                "url": {
+                    "raw": "http://localhost:8080/recetas/1",
+                    "protocol": "http",
+                    "host": ["localhost"],
+                    "port": "8080",
+                    "path": ["recetas", "1"]
+                }
+            },
+            "response": []
+        }
+    ]
+}
