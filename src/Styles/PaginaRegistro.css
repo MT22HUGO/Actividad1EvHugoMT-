@@ -1,0 +1,283 @@
+h1 {
+    padding-top: 2vh;
+    font-size: 8vh;
+}
+
+h2 {
+    font-size: 3vh;
+    color: #af9475;
+}
+
+.container {
+    display: grid;
+    grid-template-rows: 12vh 73vh 15vh;
+    grid-template-areas:
+        "top"
+        "main"
+        "footer";
+}
+
+.top {
+    grid-area: top;
+}
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "signup chef";
+}
+
+.title {
+    text-align: center;
+    font-size: 8vh;
+    color: #d15858;
+    text-shadow: 4px 3px 0 #8B5E3C, 6px 4px 0 #F5E3C4
+}
+
+.signup {
+    grid-area: signup;
+    text-align: center;
+    background-image: url("./imagesS/formulario.png");  /* He tenido que poner la imagen en una carpeta dentro de Styles porque desde public no la coge*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 70vh;
+    margin-bottom: 12vh;
+}
+
+.signup-title {
+    margin-top: 22vh;
+    font-size: 2.5vh;
+    text-shadow: 2px 1px #8B5E3C, 3px 3px#F5E3C4;
+}
+
+input {
+    margin-top: 1vh;
+    height: 2vh;
+    width: 30vh;
+    padding: 1.5vh 1.8vh;
+    background: #f4ecd8;
+    border: 0.25vh solid #c2a77d;
+    border-radius: 0.8vh;
+    outline: none;
+    font-size: 2vh;
+    font-family: "Times New Roman";
+    transition: 0.3s;   /* Para que se vea la animacion mas lenta no instantanea*/
+}
+
+input:hover {       /* Cuando pasas el puntero por encima se mueve un poco hacia arriba, cambia el fondo y añade una sombra*/
+    background: #efe2c4;
+    transform: translateY(-0.3vh);
+    box-shadow:
+        0 0.5vh 2vh rgba(0, 0, 0, 0.25);
+}
+
+.submit {
+    margin-top: 1vh;
+    padding: 1.5vh 2.5vh;
+    height: 5vh;
+    font-size: 2vh;
+    font-family: "Times New Roman";
+    background: #f4ecd8;
+    border: 0.25vh solid #c2a77d;
+    border-radius: 0.8vh;
+    cursor: pointer; /* Para que se vea la mano al pasar el puntero por encima */
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    margin-left: 42%;
+    color: gray;
+}
+
+.chef {
+    border: solid black 3px;
+    box-shadow: 4px 4px 0px #000000;
+    margin-top: 20vh;
+    grid-area: chef;
+    background-color: white;
+    width: 45vh;
+    height: 32vh;
+    margin-left: 5%;
+    margin-bottom: 20vh;
+    padding: 1.5vh;
+    display: grid;
+    grid-template-columns: 33% 39% 27%;
+    grid-template-rows: 20% 80%;
+    grid-template-areas:
+        "name email pass"
+        "char kitchen submit";
+}
+
+.gif-character {
+    grid-area: char;
+    width: 18vh;
+    margin-top: 1vh;
+}
+
+.kitchen {
+    grid-area: kitchen;
+    width: 18vh;
+    margin-top: 2vh;
+    margin-left: 10vh;
+}
+
+.name {
+    margin-left: 1vh;
+    grid-area: name;
+    margin-top: 1vh;
+    text-transform: uppercase; /* Cambia el texto a mayusculas*/
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+
+.name strong {
+    font-size: 1.7vh;
+}
+
+.email {
+    grid-area: email;
+    margin-top: 1vh;
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+
+.pass {
+    grid-area: pass;
+    margin-top: 1vh;
+    font-weight: bold;
+    font-size: 2.5vh;
+}
+
+.submit:hover {
+    background: #efe2c4;
+    transform: translateY(-0.3vh);
+    box-shadow:
+        0 0.5vh 2vh rgba(0, 0, 0, 0.25);
+}
+
+.chef .submit {
+    margin-left: -3vh;
+    grid-area: submit;
+    margin-top: 20vh;
+    width: 13vh;
+    height: 3.5vh;
+    font-size: 1.6vh;
+    background: whitesmoke;
+    border: 0.25vh solid burlywood;
+}
+
+.green {
+    font-size: 1.5vh;
+    background-color: green
+}
+
+.red {
+    font-size: 1.5vh;
+    background-color: red;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: rgba(139, 94, 60, 0.8);
+    color: #FFF8F0;
+    text-align: center;
+    padding: 1vh;
+    font-size: 2vh;
+    font-family: 'Segoe UI';
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer p {
+    margin: 0.6vh;
+}
+
+/*RESPONSIVE*/
+/* He hecho varios rangos para que vaya menguando segun necesite y cambie a vertical la parte de registro y la del cocinero*/
+@media (max-width: 1200px) {
+
+    h1 {
+        font-size: 4.5vh;
+        padding-top: 1vh;
+    }
+
+    .container {
+        grid-template-rows: auto auto auto;
+    }
+
+    .signup {
+        background-size: 40vh;
+        margin-bottom: 3vh;
+        padding-bottom: 2vh;
+    }
+
+    .signup-title {
+        margin-top: 18vh;
+        font-size: 2vh;
+    }
+
+    input {
+        width: 26vh;
+        font-size: 1.8vh;
+    }
+
+    .submit {
+        height: auto;
+        padding: 1.2vh 2vh;
+        font-size: 1.8vh;
+    }
+
+    .main {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "signup"
+            "chef";
+    }
+
+    .chef {
+        margin: 2vh auto;
+        width: 38vh;
+        padding: 1vh;
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: auto auto;
+        height: auto;
+    }
+
+    .gif-character,
+    .kitchen {
+        width: 12vh;
+    }
+}
+
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 4vh;
+    }
+
+    .signup {
+        background-size: 32vh;
+    }
+
+    input {
+        width: 22vh;
+        padding: 1vh 1.2vh;
+    }
+
+    .chef {
+        width: 32vh;
+    }
+
+    .gif-character,
+    .kitchen {
+        width: 10vh;
+    }
+
+    .footer {
+        font-size: 1.6vh;
+    }
+}

@@ -1,0 +1,48 @@
+.container-recipes {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "recipes"
+        "footer-recipes";
+    height: 100vh; /* Para que el total de la pagina sea ese y el footer este al final de la pagina*/
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    font-size: 8vh;
+    color: #d15858;
+    text-shadow: 4px 3px 0 #8B5E3C, 6px 4px 0 #F5E3C4
+}
+
+.recipes {
+    grid-area: recipes;  
+}
+
+.recipes .cards {
+    margin-top: 10vh;
+    display: flex;
+    gap: 35vh;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-left: 5vh;
+}
+
+.footer-recipes {
+    grid-area: footer-recipes;
+    background-color: rgba(139, 94, 60, 0.8);
+    color: #FFF8F0;
+    text-align: center;
+    padding: 1vh;
+    font-size: 2vh;
+    font-family: 'Segoe UI';
+}
+
+.footer-recipes p {
+    margin: 0.6vh;
+}
+
+
+/*RESPONSIVE*/
+/*no pongo nada porque con el  flex-wrap: wrap   las tarjetas mueven abajo cuando no caben y al ver la pagina como si fuera un movil se sigue viendo bien estructurada */
