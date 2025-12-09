@@ -49,7 +49,7 @@ const postReceta = (async (req, res) => {
         });
     }
 
-    const { nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, ingredientes } = req.body;
+    const { nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, halal, ingredientes, } = req.body;
 
     if (await recetaExistsByName(nombre)) {
         return res.status(409).json({
@@ -60,7 +60,7 @@ const postReceta = (async (req, res) => {
     }
     
      
-        const newReceta = await addReceta(nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, ingredientes);
+        const newReceta = await addReceta(nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, halal, ingredientes);
         res.status(201).json(newReceta);
      
 });
@@ -87,10 +87,10 @@ const putReceta = (async (req, res) => {
         });
     }
 
-    const { nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, ingredientes } = req.body;
+    const { nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, halal, ingredientes } = req.body;
 
     
-        const updatedReceta = await modifyReceta(id, nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, ingredientes);
+        const updatedReceta = await modifyReceta(id, nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, halal, ingredientes);
         res.status(200).json(updatedReceta);
     
 });

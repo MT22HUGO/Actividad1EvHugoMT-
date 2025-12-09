@@ -20,6 +20,7 @@ db.schema.hasTable('recetas').then((exists) => {
             table.decimal('valoracion', 2, 1).notNullable();
             table.boolean('publicada').defaultTo(false);
             table.timestamps(true, true);
+            table.boolean('halal').defaultTo(false);
         });
     }
 }).then(() => {
