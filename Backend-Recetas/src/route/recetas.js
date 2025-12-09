@@ -27,6 +27,10 @@ const recetaValidations = [
     body('publicada')
         .notEmpty().withMessage('El estado de publicación es obligatorio')
         .isBoolean().withMessage('El estado de publicación debe ser True o False'),
+
+    body('halal')
+        .notEmpty().withMessage('El estado de halal es obligatorio')
+        .isBoolean().withMessage('El estado de halal debe ser True o False'),
     
     body('ingredientes')
         .isArray({ min: 1 }).withMessage('Debe incluir al menos un ingrediente'),

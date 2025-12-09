@@ -9,6 +9,9 @@ function Pastel({ onClose }) {
             <div className="card-info">
                 <div className='head'>
                     <per><i className="fa-solid fa-calendar-days"></i> 07/12/2025</per>
+                    <div className='halal'>
+                    <input type="checkbox" required/> <span>halal</span>
+                    </div>
                     <pre>Pastel de chocolate </pre>
                     <div className="description">
                         <div className="item">

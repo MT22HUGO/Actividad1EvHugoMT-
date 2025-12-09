@@ -46,3 +46,16 @@
 
 /*RESPONSIVE*/
 /*no pongo nada porque con el  flex-wrap: wrap   las tarjetas mueven abajo cuando no caben y al ver la pagina como si fuera un movil se sigue viendo bien estructurada */
+@media (max-width: 760px) {
+    .halal{
+        width: 0vh;
+        height: 0vh;
+    }
+    .halal input{
+        width: 0vh;
+        height: 0vh;
+    }
+    .halal span{
+        font-size: 0px;
+    }
+}

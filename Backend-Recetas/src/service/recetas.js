@@ -25,14 +25,15 @@ const findReceta = (async(id) => {
     return receta;
 });
 
-const addReceta = (async(nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, ingredientes) => {
+const addReceta = (async(nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, halal, ingredientes) => {
     const [recetaId] = await db('recetas').insert({
         nombre: nombre,
         fechaPublicacion: fechaPublicacion,
         tiempoMinutos: tiempoMinutos,
         porciones: porciones,
         valoracion: valoracion,
-        publicada: publicada
+        publicada: publicada,
+        halal: halal
     });
 
     // Insertar ingredientes
@@ -47,14 +48,15 @@ const addReceta = (async(nombre, fechaPublicacion, tiempoMinutos, porciones, val
     return await findReceta(recetaId);
 });
 
-const modifyReceta = (async(id, nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, ingredientes) => {
+const modifyReceta = (async(id, nombre, fechaPublicacion, tiempoMinutos, porciones, valoracion, publicada, halal, ingredientes) => {
     await db('recetas').where({id: id}).update({
         nombre: nombre,
         fechaPublicacion: fechaPublicacion,
         tiempoMinutos: tiempoMinutos,
         porciones: porciones,
         valoracion: valoracion,
-        publicada: publicada
+        publicada: publicada,
+        halal: halal
     });
 
     // Eliminar ingredientes antiguos y añadir los nuevos
