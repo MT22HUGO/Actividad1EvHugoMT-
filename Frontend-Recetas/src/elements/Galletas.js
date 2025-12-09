@@ -9,6 +9,9 @@ function Galletas({ onClose }) {
             <div className="card-info">
                 <div className='head'>
                     <pre>Galletas    <i className="fa-solid fa-calendar-days"></i> 06/12/2025</pre>
+                    <div className='halal'>
+                    <input type="checkbox" required/> <span>halal</span>
+                    </div>
                     <div className="description">
                         <div className="item">
                             <i className="fa-regular fa-clock"></i>

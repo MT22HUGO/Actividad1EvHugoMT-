@@ -16,6 +16,9 @@ function NuevaReceta({ onClose }) {
             <div className="card-info">
                 <div className='head'>
                     <p className='date-container'>  <i className="fa-solid fa-calendar-days"></i> <input type='date' className='date'></input></p>
+                    <div className='halal'>
+                    <input type="checkbox" required/> <span>halal</span>
+                    </div>
                     <input type="text" placeholder='Nombre de la receta' className='name-recipe' onChange={e => cambiarnombre(e.target.value)} />
                     <div className="description">
                         <div className="item">
