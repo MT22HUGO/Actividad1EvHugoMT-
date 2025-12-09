@@ -91,6 +91,11 @@ input:hover {       /* Cuando pasas el puntero por encima se mueve un poco hacia
     color: gray;
 }
 
+.form{
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
 .chef {
     border: solid black 3px;
     box-shadow: 4px 4px 0px #000000;
